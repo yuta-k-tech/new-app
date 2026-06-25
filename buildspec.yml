@@ -3,7 +3,10 @@ version: 0.2
 phases:
   build:
     commands:
-      - aws deploy push --application-name XXX --s3-location s3://XXX/artifact.zip --source src
+      - echo "CodePipelineが自動でデプロイするため、aws deployコマンドは不要です"
+      # ※ もしビルドに必要なコマンド（例: npm run build やコンパイルなど）があればここに書きます。
+      # なければ echo だけで空欄でも大丈夫です。
+
 artifacts:
   files:
     - '**/*'
